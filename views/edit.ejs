@@ -1,0 +1,44 @@
+
+
+    <% layout ("layouts/boilerplate")%>
+
+    <div class="row">
+        <h1 class="text-center">New campground</h1>
+        <div class = "col-6 offset-3">
+            <form action="/campgrounds/<%=camp._id%>?_method=PUT" method='post' novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class ="form-label" for="title">Title</label>
+                    <input class ="form-control" type="text" name= "campgrounds[title]" id="title" value="<%=camp.title%>" required>
+    
+                </div>
+    
+                <div  class="mb-3" >
+                    <label class ="form-label" for="location">Location</label>
+                    <input class ="form-control" type="text" name= "campgrounds[location]" id="location"  value="<%=camp.location%>" required>
+                    
+                </div>
+    
+                <div  class="mb-3" >
+                    <label class ="form-label" for="image">Image URL</label>
+                    <input class ="form-control" type="text" name= "campgrounds[image]" id="image" value="<%=camp.image%>" >required
+                    
+                </div>
+                <div  class="mb-3" >
+                    <label class ="form-label" for="price">Image URL</label>
+                    <input class ="form-control" type="text" name= "campgrounds[price]" id="price" value="<%=camp.price%>" >required
+                    
+                </div>
+    
+                <div  class="mb-3" >
+                    <label class ="form-label" for="description">Description</label>
+                    <textarea class ="form-control" type="text" name= "campgrounds[description]" id="description" required> <%=camp.description%> </textarea>
+                    
+                </div>
+                
+                <button class="btn btn-info">Update Campground</button>
+            
+            </form>
+        </div>    
+    </div>
+    
+
